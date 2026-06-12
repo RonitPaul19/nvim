@@ -1,5 +1,5 @@
 vim.keymap.set('n', '<leader>s', '<cmd>w<CR>')
-vim.keymap.set('n', '\'', ';')
+vim.keymap.set('n', ';', ':')
 vim.keymap.set('v', 'p', 'P')
 vim.keymap.set('n', 'U', '<C-r>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
@@ -7,11 +7,12 @@ vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
 vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>q<CR>')
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true })
 
 -- buffer movement
-vim.keymap.set('n', '<leader>nb', '<cmd>bn<CR>')
-vim.keymap.set('n', '<leader>pb', '<cmd>bp<CR>')
-vim.keymap.set('n', '<leader>cb', '<cmd>bd<CR>')
+vim.keymap.set('n', 'gt', '<cmd>bn<CR>')
+vim.keymap.set('n', 'gT', '<cmd>bp<CR>')
+vim.keymap.set('n', '<leader>cf', '<cmd>bd<CR>')
 
 
 -- window management
