@@ -16,7 +16,6 @@ vim.keymap.set('n', 'gt', '<cmd>bn<CR>')
 vim.keymap.set('n', 'gT', '<cmd>bp<CR>')
 vim.keymap.set('n', '<leader>cf', '<cmd>bd<CR>')
 
-
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })   -- split window horizontally
