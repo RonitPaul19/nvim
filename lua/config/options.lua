@@ -1,38 +1,45 @@
-vim.g.netrw_liststyle = 3
-vim.g.mapleader = " "
+local opt = vim.opt
+local g = vim.g
 
-vim.opt.guicursor = ""
-vim.opt.number = true
-vim.opt.relativenumber = true
+opt.mouse = ""
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.wrap = false
+g.netrw_banner = 0
 
-vim.opt.swapfile = false
-vim.opt.backup = false
+opt.number = true
+opt.relativenumber = true
 
-vim.opt.incsearch = true
-vim.opt.inccommand = "nosplit"
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.opt.scrolloff = 5
+opt.wrap = false
+opt.smartindent = true
+opt.inccommand = "split"
 
-vim.opt.signcolumn = "yes"
+opt.splitbelow = true
+opt.splitright = true
 
-vim.opt.backspace = { "start", "eol", "indent" }
+opt.ignorecase = true
+opt.smartcase = true
+opt.laststatus = 3
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+opt.swapfile = false
+opt.backup = false
+opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+opt.undofile = true
 
-vim.opt.clipboard = "unnamedplus"
-vim.opt.hlsearch = true
+opt.clipboard:append("unnamedplus")
+opt.isfname:append("@-@")
+opt.guicursor = ""
+opt.scrolloff = 8
 
-vim.opt.mouse = "a"
+opt.cmdheight = 0
+opt.termguicolors = true
+
+opt.signcolumn = "yes"
+
+opt.updatetime = 250
+opt.timeoutlen = 300
+
+opt.completeopt = { "menu", "menuone", "noselect" }
