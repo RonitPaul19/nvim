@@ -26,8 +26,6 @@ opt.laststatus = 3
 
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.fn.stdpath("data") .. "/undodir"
-opt.undofile = true
 
 opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")

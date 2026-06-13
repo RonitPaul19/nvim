@@ -13,6 +13,11 @@ vim.keymap.set('n', '<leader>q', '<cmd>q<CR>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true })
 
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result cursor centered" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result cursor centered" })
+
+vim.keymap.set('n', '<leader>rw', '<cmd>restart<CR>', { desc = "restart neovim" })
+
 -- buffer movement
 vim.keymap.set('n', 'gt', '<cmd>bn<CR>')
 vim.keymap.set('n', 'gT', '<cmd>bp<CR>')
