@@ -26,3 +26,23 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Disable arrow keys in all modes
+-- local modes = { 'n', 'i', 'v', 'c', 't', 'o', 's', 'x' } -- All possible modes
+local modes = { 'n', 'i', 'v', 'o', 't', 's', 'x' } -- All possible modes
+local arrows = { '<Up>', '<Down>', '<Left>', '<Right>' }
+
+for _, mode in ipairs(modes) do
+  for _, key in ipairs(arrows) do
+    vim.keymap.set(mode, key, '<Nop>', { noremap = true, silent = true })
+  end
+end
+
+local enabledModes = { 'i', 'c', 't' }
+-- Map Alt + hjkl in Insert mode
+for _, mode in ipairs(enabledModes) do
+  vim.keymap.set(mode, '<A-h>', '<Left>', { noremap = true, silent = true })
+  vim.keymap.set(mode, '<A-j>', '<Down>', { noremap = true, silent = true })
+  vim.keymap.set(mode, '<A-k>', '<Up>', { noremap = true, silent = true })
+  vim.keymap.set(mode, '<A-l>', '<Right>', { noremap = true, silent = true })
+end
