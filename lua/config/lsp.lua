@@ -1,3 +1,14 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_deep_extend(
+  "force",
+  capabilities,
+  require("cmp_nvim_lsp").default_capabilities()
+)
+
+vim.lsp.config("*", {
+  capabilities = capabilities,
+})
+
 vim.lsp.config('clangd', {
   cmd = { 'clangd' },
   filetypes = { 'c', 'cpp' },
@@ -23,3 +34,5 @@ vim.lsp.enable({
   'bashls',
   'lua_ls',
 })
+
+
