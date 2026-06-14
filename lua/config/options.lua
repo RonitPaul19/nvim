@@ -32,9 +32,6 @@ opt.isfname:append("@-@")
 opt.guicursor = ""
 opt.scrolloff = 8
 
-opt.cmdheight = 0
-opt.termguicolors = true
-
 opt.signcolumn = "yes"
 
 opt.updatetime = 250
