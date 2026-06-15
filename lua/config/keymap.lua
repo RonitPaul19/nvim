@@ -17,6 +17,9 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result cursor center
 
 vim.keymap.set('n', '<leader>rw', '<cmd>restart<CR>', { desc = "restart neovim" })
 
+-- visual block mode
+vim.keymap.set("n", "<leader>v", "<C-v>", { desc = "Visual Block Mode" })
+
 -- buffer movement
 vim.keymap.set('n', 'gt', '<cmd>bn<CR>')
 vim.keymap.set('n', 'gT', '<cmd>bp<CR>')
