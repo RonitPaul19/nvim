@@ -38,3 +38,14 @@ opt.updatetime = 250
 opt.timeoutlen = 300
 
 opt.completeopt = { "menu", "menuone", "noselect" }
+
+vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#5f2fa4" })
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = "YankHighlight",
+      timeout = 200,
+    })
+  end,
+})
