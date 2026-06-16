@@ -23,6 +23,12 @@ return {
     luasnip.filetype_extend("vue", { "nuxt" })
 
     require("blink.cmp").setup({
+      enabled = function()
+        local ft = vim.bo.filetype
+        if ft == "DressingInput" or ft == "DressingSelect" then return false end
+        if vim.bo.buftype == "prompt" then return false end
+        return vim.fn.mode() ~= "c"
+      end,
       keymap = {
         ["<C-n>"] = { "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback" },

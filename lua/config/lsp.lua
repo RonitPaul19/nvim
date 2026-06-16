@@ -37,6 +37,18 @@ vim.lsp.config("ts_ls", {
   },
 })
 
+vim.lsp.config("html", {
+  cmd = { "vscode-html-language-server", "--stdio" },
+  filetypes = { "html" },
+  root_markers = { "package.json", ".git" },
+})
+
+vim.lsp.config("emmet_language_server", {
+  cmd = { "emmet-language-server", "--stdio" },
+  filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "vue", "xml" },
+  root_markers = { ".git" },
+})
+
 vim.lsp.enable({
   "clangd",
   "pyright",
