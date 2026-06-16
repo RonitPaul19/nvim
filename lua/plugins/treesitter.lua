@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  event = { "BufReadPre", "BufNewFile" },
   opts = {
     ensure_installed = {
       "c",
@@ -21,8 +22,10 @@ return {
     },
   },
   config = function(_, opts)
-    -- Force treesitter to use clang instead of cl.exe
-    require("nvim-treesitter.install").compilers = { "gcc", "clang" }
+    -- Force treesitter to use gcc instead of cl.exe (Windows MSVC workaround)
+    -- Also set CC env var so tree-sitter CLI uses gcc (not cl.exe)
+    vim.env.CC = "gcc"
+    require("nvim-treesitter.install").compilers = { "gcc" }
 
     require("nvim-treesitter").setup(opts)
 
