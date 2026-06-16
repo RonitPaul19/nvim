@@ -21,9 +21,9 @@ vim.keymap.set('n', '<leader>rw', '<cmd>restart<CR>', { desc = "restart neovim" 
 vim.keymap.set("n", "<leader>v", "<C-v>", { desc = "Visual Block Mode" })
 
 -- buffer movement
-vim.keymap.set('n', 'gt', '<cmd>bn<CR>')
-vim.keymap.set('n', 'gT', '<cmd>bp<CR>')
-vim.keymap.set('n', '<leader>cf', '<cmd>bd<CR>')
+vim.keymap.set('n', '<leader>nb', '<cmd>bn<CR>')
+vim.keymap.set('n', '<leader>pb', '<cmd>bp<CR>')
+vim.keymap.set('n', '<leader>cb', '<cmd>bd<CR>')
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
