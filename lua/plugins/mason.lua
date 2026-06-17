@@ -14,13 +14,11 @@ return {
       ensure_installed = {
         "clangd",
         "pyright",
-        "ts_ls",
         "html",
         "cssls",
         "tailwindcss",
         "jsonls",
         "emmet_language_server",
-        "vue_ls",
         "bashls",
         "lua_ls",
       },
