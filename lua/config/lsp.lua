@@ -1,9 +1,4 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = vim.tbl_deep_extend(
-  "force",
-  capabilities,
-  require("blink.cmp").get_lsp_capabilities()
-)
 
 vim.lsp.config("*", {
   capabilities = capabilities,
@@ -47,20 +42,6 @@ vim.lsp.config("emmet_language_server", {
   cmd = { "emmet-language-server", "--stdio" },
   filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "vue", "xml" },
   root_markers = { ".git" },
-})
-
-vim.lsp.enable({
-  "clangd",
-  "pyright",
-  "ts_ls",
-  "html",
-  "cssls",
-  "tailwindcss",
-  "jsonls",
-  "emmet_language_server",
-  "vue_ls",
-  "bashls",
-  "lua_ls",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
