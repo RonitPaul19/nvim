@@ -18,7 +18,7 @@ local mappings = {
 
   -- Code Navigation
   { 'n', 'gd',          'editor.action.revealDefinition' },
-  { 'n', 'gi',          'editor.action.goToImplementation' },
+  { 'n', 'gi',          'editor.action.goToDeclaration' },
   { 'n', 'gr',          'editor.action.goToReferences' },
   { 'n', '<leader>gs',  'workbench.action.gotoSymbol' },
   { 'n', '<leader>gl',  'workbench.action.gotoLine' },
