@@ -1,4 +1,5 @@
 local ls = require("luasnip")
+local rep = require("luasnip.extras").rep
 
 local s = ls.snippet
 local t = ls.text_node
