@@ -7,7 +7,7 @@ local i = ls.insert_node
 
 return {
 
-  s("c", {
+  s("cmain", {
     t({
       "#include <stdio.h>",
       "",
@@ -20,20 +20,6 @@ return {
       "  return 0;",
       "}",
     }),
-  }),
-
-  s("printf", {
-    t('printf("'),
-    i(1),
-    t('\\n");'),
-  }),
-
-  s("scanf", {
-    t('scanf("'),
-    i(1, "%d"),
-    t('", &'),
-    i(2, "x"),
-    t(");"),
   }),
 
   s("malloc", {
