@@ -1,8 +1,6 @@
 local opt = vim.opt
 local g = vim.g
 
-opt.mouse = ""
-
 g.netrw_banner = 0
 
 opt.number = true
