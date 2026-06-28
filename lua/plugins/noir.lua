@@ -1,3 +1,0 @@
-return {
-  "dzfrias/noir.nvim",
-}

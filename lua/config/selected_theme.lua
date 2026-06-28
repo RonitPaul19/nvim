@@ -1,1 +1,1 @@
-return "noir"
+return "rose-pine"

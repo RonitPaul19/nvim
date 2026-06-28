@@ -13,16 +13,16 @@ return {
         side = "right",
         width = 30,
       },
-      -- change folder arrow icons
       renderer = {
+        highlight_git = true,
         indent_markers = {
           enable = true,
         },
         icons = {
           glyphs = {
             folder = {
-              arrow_closed = "", -- arrow when folder is closed
-              arrow_open = "", -- arrow when folder is open
+              arrow_closed = "",
+              arrow_open = "",
             },
           },
         },
