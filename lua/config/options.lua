@@ -6,6 +6,8 @@ g.netrw_banner = 0
 opt.number = true
 opt.relativenumber = true
 
+opt.termguicolors = true
+
 opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2

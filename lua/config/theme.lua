@@ -10,10 +10,6 @@ local function set_transparency()
     "NvimTreeNormal", "NvimTreeNormalNC", "NvimTreeEndOfBuffer",
     "TelescopeNormal", "TelescopeBorder", "TelescopePromptBorder",
     "WhichKeyFloat", "WhichKeyBorder",
-    "DiagnosticVirtualTextError", "DiagnosticVirtualTextWarn",
-    "DiagnosticVirtualTextInfo", "DiagnosticVirtualTextHint",
-    "DiagnosticSignError", "DiagnosticSignWarn",
-    "DiagnosticSignInfo", "DiagnosticSignHint",
     "LspInlayHint",
   }
   for _, group in ipairs(groups) do
