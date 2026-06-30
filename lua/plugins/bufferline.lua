@@ -5,13 +5,16 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    local theme = require("config.theme")
-    theme.setup_bufferline()
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "ThemeChanged",
-      callback = function()
-        theme.setup_bufferline()
-      end,
+    require("bufferline").setup({
+      options = {
+        mode = "buffers",
+        numbers = "none",
+        diagnostics = "nvim_lsp",
+        indicator = { style = "none" },
+        show_buffer_close_icons = true,
+        show_close_icon = false,
+        always_show_bufferline = true,
+      },
     })
   end,
 }

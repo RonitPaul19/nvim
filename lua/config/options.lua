@@ -39,6 +39,9 @@ opt.timeoutlen = 300
 
 opt.completeopt = { "menuone", "noselect" }
 
+local pipe = "\\\\.\\pipe\\theme-switcher"
+pcall(vim.fn.serverstart, pipe)
+
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#5f2fa4" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
