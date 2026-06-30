@@ -23,16 +23,31 @@ vim.diagnostic.config({
 })
 
 local function set_diagnostic_highlights()
-  -- Error (Red)
-  vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#ff5555", bg = "#3a1f1f" })
-  vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = "#ffb86c", bg = "#3a2f1f" })
-  vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = "#62d6e8", bg = "#1f2f3a" })
-  vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = "#50fa7b", bg = "#1f3a26" })
+  local function hl(name)
+    return vim.api.nvim_get_hl(0, { name = name })
+  end
+
+  local diag_error = hl("DiagnosticError")
+  local diag_warn = hl("DiagnosticWarn")
+  local diag_info = hl("DiagnosticInfo")
+  local diag_hint = hl("DiagnosticHint")
+
+  if diag_error.fg then
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = diag_error.fg })
+  end
+  if diag_warn.fg then
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = diag_warn.fg })
+  end
+  if diag_info.fg then
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = diag_info.fg })
+  end
+  if diag_hint.fg then
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = diag_hint.fg })
+  end
 end
 
--- Apply immediately on load
 set_diagnostic_highlights()
--- Reapply every time a colorscheme is loaded, so it doesn't get overwritten
+
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = set_diagnostic_highlights,
 })
