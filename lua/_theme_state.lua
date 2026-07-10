@@ -1,1 +1,1 @@
-return "kanagawa"
+return "rose-pine"
