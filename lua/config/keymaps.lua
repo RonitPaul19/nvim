@@ -15,8 +15,8 @@ set('n', 'k', 'gk', { noremap = true, silent = true })
 set('n', '<leader>pv', '<cmd>Ex<CR>')
 set('n', '<leader>q', '<cmd>q<CR>')
 
--- set('n', '<C-d>', '<C-d>zz', { noremap = true })
--- set('n', '<C-u>', '<C-u>zz', { noremap = true })
+set('n', '<C-d>', '<C-d>zz', { noremap = true })
+set('n', '<C-u>', '<C-u>zz', { noremap = true })
 
 set("n", "n", "nzzzv", { desc = "Next search result cursor centered" })
 set("n", "N", "Nzzzv", { desc = "Previous search result cursor centered" })
