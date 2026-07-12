@@ -37,5 +37,11 @@ set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })   -- sp
 set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })      -- make split windows equal width & height
 set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
+-- Moving between splits
+set("n", "<C-h>", "<C-w>h")
+set("n", "<C-j>", "<C-w>j")
+set("n", "<C-k>", "<C-w>k")
+set("n", "<C-l>", "<C-w>l")
+
 set("v", "<", "<gv")
 set("v", ">", ">gv")
