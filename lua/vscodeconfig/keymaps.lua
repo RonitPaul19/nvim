@@ -90,6 +90,9 @@ local mappings = {
   { 'n', '<leader>rw', 'workbench.action.reloadWindow' },
   { 'n', '<leader>os', 'workbench.action.openSettingsJson' },
 
+  -- Open file explorer
+  { 'n', '<leader>e', 'workbench.view.explorer'},
+
   -- Window Management
   { 'n', '<leader>sv', 'workbench.action.splitEditor' },
   { 'n', '<leader>sh', 'workbench.action.splitEditorDown' },

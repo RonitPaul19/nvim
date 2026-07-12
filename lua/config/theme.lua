@@ -3,14 +3,19 @@ local M = {}
 local state_path = vim.fn.stdpath("config") .. "/lua/_theme_state.lua"
 
 local theme_map = {
+
   ["catppuccin"] = function()
-    require("catppuccin").setup({ flavour = "mocha", transparent_background = false })
+    require("catppuccin").setup({ flavour = "mocha", transparent_background = true })
     vim.cmd.colorscheme("catppuccin-mocha")
   end,
+
   ["rose-pine"] = function()
-    require("rose-pine").setup({ variant = "main" })
+    require("rose-pine").setup({
+      variant = "main",
+    })
     vim.cmd.colorscheme("rose-pine")
   end,
+
   ["everforest"] = function()
     vim.g.everforest_background = "hard"
     vim.cmd.colorscheme("everforest")
