@@ -12,7 +12,6 @@ set('n', 'U', '<C-r>')
 set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
 set('n', 'j', 'gj', { noremap = true, silent = true })
 set('n', 'k', 'gk', { noremap = true, silent = true })
-set('n', '<leader>pv', '<cmd>Ex<CR>')
 set('n', '<leader>q', '<cmd>q<CR>')
 
 set('n', '<C-d>', '<C-d>zz', { noremap = true })
