@@ -4,6 +4,7 @@ if vim.g.vscode then
 else
   require("config.options")
   require("config.keymaps")
+  require("config.transparent")
   require("lazy-setup")
 
   local theme = require("config.theme")
