@@ -93,6 +93,9 @@ local mappings = {
   -- Open file explorer
   { 'n', '<leader>e', 'workbench.view.explorer'},
 
+  -- run code
+  { 'n', '<leader>r', 'code-runner.run' },
+
   -- Window Management
   { 'n', '<leader>sv', 'workbench.action.splitEditor' },
   { 'n', '<leader>sh', 'workbench.action.splitEditorDown' },

@@ -35,7 +35,7 @@ opt.backup = false
 
 opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")
-opt.guicursor = ""
+-- opt.guicursor = ""
 
 opt.signcolumn = "no"
 
