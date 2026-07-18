@@ -6,8 +6,4 @@ else
   require("config.keymaps")
   require("config.transparent")
   require("lazy-setup")
-
-  local theme = require("config.theme")
-  theme.load()
-  theme.watch()
 end

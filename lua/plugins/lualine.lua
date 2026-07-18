@@ -4,7 +4,7 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = "auto",
+        theme = "rose-pine",
         component_separators = "",
         section_separators = "",
         globalstatus = true,
