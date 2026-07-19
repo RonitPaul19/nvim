@@ -1,5 +1,3 @@
-vim.g.mapleader = ' '
-
 -- sync system clipboard
 vim.opt.clipboard = 'unnamedplus'
 
