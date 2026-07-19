@@ -4,7 +4,7 @@ opt.termguicolors = true
 
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = false
+opt.cursorline = true
 opt.wrap = false
 opt.scrolloff = 8
 opt.sidescrolloff = 10
