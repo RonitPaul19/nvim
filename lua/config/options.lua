@@ -23,7 +23,7 @@ opt.incsearch = true
 
 opt.inccommand = "split"
 
-opt.cmdheight = 1
+opt.cmdheight = 0
 
 opt.splitbelow = true
 opt.splitright = true
