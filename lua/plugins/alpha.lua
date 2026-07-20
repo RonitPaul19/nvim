@@ -15,7 +15,7 @@ return {
     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
       ]], '\n', { trimempty = true })
     vim.api.nvim_set_hl(0, "AlphaHeader", {
-        fg = "#9CCFD8", -- light blue (Catppuccin Sky)
+        fg = "#9CCFD8",
         bold = true,
     })
 
