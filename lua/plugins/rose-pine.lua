@@ -1,16 +1,14 @@
 return {
   "rose-pine/neovim",
   name = "rose-pine",
-  lazy = false, -- load at startup
-  priority = 1000, -- load before other UI plugins
+  lazy = false,
+  priority = 1000,
+
   config = function()
     require("rose-pine").setup({
-      disable_background = true, -- transparent background
-      disable_float_background = true, -- transparent floating windows
-
-      styles = {
-        transparency = true,
-      },
+      disable_background = true,
+      disable_float_background = true, -- optional: transparent floating windows
+      disable_italics = false,
     })
 
     vim.cmd.colorscheme("rose-pine")
