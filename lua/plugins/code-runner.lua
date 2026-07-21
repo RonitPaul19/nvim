@@ -8,6 +8,8 @@ return {
   config = function()
     require("code_runner").setup({
       mode = "float",
+      project = {},
+      root_markers = {},
 
       float = {
         border = "rounded",
