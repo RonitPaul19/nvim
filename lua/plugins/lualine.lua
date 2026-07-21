@@ -23,7 +23,7 @@ return {
           if not item then
             return ""
           end
-          return " " .. vim.fn.fnamemodify(item.value, ":t") .. " "
+          return " " .. index .. " " .. vim.fn.fnamemodify(item.value, ":t") .. " "
         end,
         color = function()
           local ok, harpoon = pcall(require, "harpoon")
@@ -67,9 +67,9 @@ return {
         globalstatus = true,
       },
       sections = {
-        lualine_a = harpoon_slots,
+        lualine_a = {},
         lualine_b = {},
-        lualine_c = {},
+        lualine_c = harpoon_slots,
         lualine_x = { "filetype" },
         lualine_y = {},
         lualine_z = { "mode" },
