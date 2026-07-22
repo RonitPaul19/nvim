@@ -5,5 +5,5 @@ else
   require("config.options")
   require("config.keymaps")
   require("config.transparent")
-  require("lazy-setup")
+  require("config.lazy")
 end
