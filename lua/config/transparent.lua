@@ -10,8 +10,6 @@ local function make_transparent()
     "StatusLine",
     "StatusLineNC",
     "EndOfBuffer",
-    "Pmenu",
-    "PmenuSel",
     "TabLine",
     "VertSplit",
   }
