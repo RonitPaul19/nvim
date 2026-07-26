@@ -8,13 +8,13 @@ set('x', 'p', [["_dP]], { desc = "Paste without yanking" })
 set({ 'n', 'v' }, 'd', [["_d]], { desc = "Delete without yanking" })
 
 -- save
-set("n", "<leader>s", "<cmd>w<CR>")
+set("n", "<leader>s", "<cmd>w<CR>", { noremap = true })
 
 -- redo
 set("n", "U", "<C-r>")
 
 -- clear search highlighting
-set("n", "<Esc>", "<cmd>nohl<CR>")
+set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- skip folds (down, up)
 vim.cmd('nmap j gj')

@@ -9,9 +9,15 @@ return {
       ----------------------------------------------------------
 
       vim.diagnostic.config({
-        virtual_text = true,
-        signs = true,
-        underline = true,
+        virtual_text = {
+          severity = vim.diagnostic.severity.ERROR,
+        },
+        signs = {
+          severity = vim.diagnostic.severity.ERROR,
+        },
+        underline = {
+          severity = vim.diagnostic.severity.ERROR,
+        },
         update_in_insert = false,
         severity_sort = true,
         float = {
@@ -44,7 +50,7 @@ return {
           vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
           vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
           vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-          vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+          vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, opts)
 
           vim.keymap.set("n", "gh", vim.lsp.buf.hover, opts)
           vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
