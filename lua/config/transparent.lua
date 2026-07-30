@@ -1,28 +1,28 @@
 local function make_transparent()
-  local groups = {
-    "Normal",
-    "NormalNC",
-    "NormalFloat",
-    "FloatBorder",
-    "FloatTitle",
-    "FloatFooter",
-    "SignColumn",
-    "StatusLine",
-    "StatusLineNC",
-    "EndOfBuffer",
-    "TabLine",
-    "VertSplit",
-  }
+	local groups = {
+		"Normal",
+		"NormalNC",
+		"NormalFloat",
+		"FloatBorder",
+		"FloatTitle",
+		"FloatFooter",
+		"SignColumn",
+		"StatusLine",
+		"StatusLineNC",
+		"EndOfBuffer",
+		"TabLine",
+		"VertSplit",
+	}
 
-  for _, group in ipairs(groups) do
-    vim.api.nvim_set_hl(0, group, {
-      bg = "NONE",
-      ctermbg = "NONE",
-    })
-  end
+	for _, group in ipairs(groups) do
+		vim.api.nvim_set_hl(0, group, {
+			bg = "NONE",
+			ctermbg = "NONE",
+		})
+	end
 end
 
 make_transparent()
 vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = make_transparent,
+	callback = make_transparent,
 })
