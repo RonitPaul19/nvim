@@ -35,7 +35,7 @@ opt.backup = false
 
 opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")
--- opt.guicursor = ""
+opt.guicursor = ""
 
 opt.signcolumn = "yes"
 
@@ -47,10 +47,10 @@ opt.completeopt = { "menuone", "noselect" }
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#5f2fa4" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank({
-      higroup = "YankHighlight",
-      timeout = 200,
-    })
-  end,
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "YankHighlight",
+			timeout = 200,
+		})
+	end,
 })
