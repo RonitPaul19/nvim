@@ -7,7 +7,7 @@ return {
 	config = function()
 		require("rose-pine").setup({
 			disable_background = true,
-			-- disable_float_background = true, -- optional: transparent floating windows
+			disable_float_background = true, -- optional: transparent floating windows
 			disable_italics = false,
 		})
 
