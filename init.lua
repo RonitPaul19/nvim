@@ -1,9 +1,5 @@
 if vim.g.vscode then
-	require("vscodeconfig.options")
-	require("vscodeconfig.keymaps")
+	require("vscodeconfig")
 else
-	require("config.options")
-	require("config.keymaps")
-	require("config.transparent")
-	require("config.lazy")
+	require("config")
 end
