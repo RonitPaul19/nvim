@@ -33,5 +33,15 @@ return {
 		vim.keymap.set("n", "<leader>pg", builtin.live_grep, {
 			desc = "Find in Global",
 		})
+
+		vim.keymap.set("n", "<leader>pws", function()
+			local word = vim.fn.expand("<cword>")
+			builtin.grep_string({ search = word })
+		end)
+
+		vim.keymap.set("n", "<leader>pWs", function()
+			local word = vim.fn.expand("<cWORD>")
+			builtin.grep_string({ search = word })
+		end)
 	end,
 }

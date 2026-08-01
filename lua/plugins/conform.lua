@@ -1,48 +1,48 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    event = { "BufReadPost" },
+	{
+		"stevearc/conform.nvim",
+		event = { "BufReadPost" },
 
-    opts = {
-      formatters_by_ft = {
-        c = { "clang-format" },
-        cpp = { "clang-format" },
+		opts = {
+			formatters_by_ft = {
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 
-        javascript = { "prettier" },
-        javascriptreact = { "prettier" },
+				javascript = { "prettier" },
+				javascriptreact = { "prettier" },
 
-        typescript = { "prettier" },
-        typescriptreact = { "prettier" },
+				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
 
-        vue = { "prettier" },
+				vue = { "prettier" },
 
-        html = { "prettier" },
-        css = { "prettier" },
-        scss = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
+				scss = { "prettier" },
 
-        json = { "prettier" },
-        jsonc = { "prettier" },
+				json = { "prettier" },
+				jsonc = { "prettier" },
 
-        yaml = { "prettier" },
-        markdown = { "prettier" },
+				yaml = { "prettier" },
+				markdown = { "prettier" },
 
-        lua = { "stylua" },
-      },
+				lua = { "stylua" },
+			},
 
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_format = "fallback",
-      },
-    },
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_format = "fallback",
+			},
+		},
 
-    config = function(_, opts)
-      require("conform").setup(opts)
+		config = function(_, opts)
+			require("conform").setup(opts)
 
-      vim.keymap.set("n", "<leader>fc", function()
-        require("conform").format({
-          async = true,
-        })
-      end, { desc = "Format Code" })
-    end,
-  },
+			vim.keymap.set("n", "<leader>fc", function()
+				require("conform").format({
+					async = true,
+				})
+			end, { desc = "Format Code" })
+		end,
+	},
 }
