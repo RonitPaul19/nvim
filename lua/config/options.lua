@@ -37,7 +37,7 @@ opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")
 opt.guicursor = ""
 
-opt.signcolumn = "yes"
+-- opt.signcolumn = "yes"
 
 opt.updatetime = 250
 opt.timeoutlen = 300
