@@ -15,6 +15,9 @@ return {
 		})
 
 		vim.keymap.set("n", "za", function()
+			if vim.fn.foldlevel(vim.fn.line(".")) == 0 then
+				return
+			end
 			vim.cmd("normal! za")
 		end, { desc = "Toggle fold under cursor" })
 	end,
