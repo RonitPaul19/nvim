@@ -3,13 +3,13 @@ return {
 	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		-- "rcarriga/nvim-notify",
 	},
 
 	config = function()
-		require("notify").setup({
-			background_colour = "#000000",
-		})
+		-- require("notify").setup({
+		-- 	background_colour = "#000000",
+		-- })
 
 		require("noice").setup({
 			lsp = {
