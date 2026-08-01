@@ -2,16 +2,16 @@ local function make_transparent()
 	local groups = {
 		"Normal",
 		"NormalNC",
-		-- "NormalFloat",
+		"NormalFloat",
 		-- "FloatBorder",
-		-- "FloatTitle",
-		-- "FloatFooter",
-		-- "SignColumn",
-		-- "StatusLine",
-		-- "StatusLineNC",
-		-- "EndOfBuffer",
-		-- "TabLine",
-		-- "VertSplit",
+		"FloatTitle",
+		"FloatFooter",
+		"SignColumn",
+		"StatusLine",
+		"StatusLineNC",
+		"EndOfBuffer",
+		"TabLine",
+		"VertSplit",
 	}
 
 	for _, group in ipairs(groups) do
