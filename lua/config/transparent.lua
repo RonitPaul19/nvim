@@ -3,7 +3,7 @@ local function make_transparent()
 		"Normal",
 		"NormalNC",
 		"NormalFloat",
-		-- "FloatBorder",
+		"FloatBorder",
 		"FloatTitle",
 		"FloatFooter",
 		"SignColumn",

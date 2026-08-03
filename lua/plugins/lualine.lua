@@ -6,7 +6,7 @@ return {
 	},
 	config = function()
 		local colors = {
-			foam = "#9ccfd8",
+			sky = "#89b4fa",
 			base = "#191724",
 			white = "#ffffff",
 		}
@@ -39,7 +39,7 @@ return {
 					local current_file = vim.fn.expand("%:p")
 
 					if full_path == current_file then
-						return { bg = colors.foam, fg = colors.base, gui = "bold" }
+						return { bg = colors.sky, fg = colors.base, gui = "bold" }
 					else
 						return { bg = "NONE", fg = colors.white }
 					end
@@ -61,16 +61,16 @@ return {
 
 		require("lualine").setup({
 			options = {
-				theme = "rose-pine",
+				theme = "auto",
 				component_separators = "",
 				section_separators = "",
 				globalstatus = true,
 			},
 			sections = {
 				lualine_a = {},
-				lualine_b = {},
-				lualine_c = harpoon_slots,
-				lualine_x = { "filetype" },
+				lualine_b = harpoon_slots,
+				lualine_c = {},
+				lualine_x = { "filename", "filetype" },
 				lualine_y = {},
 				lualine_z = { "mode" },
 			},
