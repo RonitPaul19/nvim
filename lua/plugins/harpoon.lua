@@ -39,6 +39,10 @@ return {
 			harpoon:list():select(4)
 		end, { desc = "Harpoon File 4" })
 
+		map("n", "<leader>5", function()
+			harpoon:list():select(5)
+		end, { desc = "Harpoon File 5" })
+
 		-- Previous / Next
 		map("n", "<C-S-P>", function()
 			harpoon:list():prev()
