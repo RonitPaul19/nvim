@@ -13,15 +13,6 @@ return {
 				float = {
 					transparent = true,
 				},
-
-				integrations = {
-					telescope = true,
-					treesitter = true,
-					lualine = true,
-					native_lsp = {
-						enabled = true,
-					},
-				},
 			})
 
 			vim.cmd.colorscheme("catppuccin")
