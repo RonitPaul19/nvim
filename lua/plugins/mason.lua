@@ -35,7 +35,6 @@ return {
 		},
 		opts = {
 			ensure_installed = {
-				"clang-format",
 				"prettier",
 				"stylua",
 			},
