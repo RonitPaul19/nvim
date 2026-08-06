@@ -22,6 +22,7 @@ set("n", "k", "gk", { noremap = true, silent = true })
 
 -- quit
 set("n", "<leader>q", "<cmd>q<CR>")
+set("n", "<leader>qq", "<cmd>q!<CR>")
 
 -- centered page up-down
 set("n", "<C-d>", "<C-d>zz", { noremap = true })

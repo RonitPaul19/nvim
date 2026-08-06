@@ -2,12 +2,7 @@ return {
 	"stevearc/aerial.nvim",
 	name = "aerial",
 	config = function()
-		require("aerial").setup({
-			on_attach = function(bufnr)
-				vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
-				vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
-			end,
-		})
+		require("aerial").setup({})
 		vim.keymap.set("n", "<leader>ar", "<cmd>AerialToggle!<CR>")
 	end,
 }

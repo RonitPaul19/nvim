@@ -8,6 +8,8 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 
+				python = { "ruff_format" },
+
 				javascript = { "prettier" },
 				javascriptreact = { "prettier" },
 

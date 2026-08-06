@@ -77,6 +77,7 @@ return {
 
 			local servers = {
 				"clangd",
+				"ruff",
 				"vtsls",
 				"vue_ls",
 				"html",
