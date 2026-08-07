@@ -42,5 +42,9 @@ return {
 			local word = vim.fn.expand("<cWORD>")
 			builtin.grep_string({ search = word })
 		end)
+
+		vim.keymap.set("n", "<leader>pd", builtin.diagnostics, {
+			desc = "Search diagnostics",
+		})
 	end,
 }
