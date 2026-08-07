@@ -21,12 +21,12 @@ return {
 		dashboard.section.header.opts.hl = "AlphaHeader"
 
 		dashboard.section.buttons.val = {
-			-- dashboard.button("f", "  Find File", "<cmd>Telescope find_files<CR>"),
-			-- dashboard.button("g", "󰱼  Live Grep", "<cmd>Telescope live_grep<CR>"),
-			-- dashboard.button("r", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),
-			-- dashboard.button("o", "  Oil Explorer", "<cmd>Oil<CR>"),
-			-- dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
-			-- dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
+			dashboard.button("f", "  Find File", "<cmd>Telescope find_files<CR>"),
+			dashboard.button("g", "󰱼  Live Grep", "<cmd>Telescope live_grep<CR>"),
+			dashboard.button("r", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),
+			dashboard.button("o", "  Oil Explorer", "<cmd>Oil<CR>"),
+			dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
+			dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
 		}
 
 		for _, button in ipairs(dashboard.section.buttons.val) do
@@ -42,7 +42,7 @@ return {
 		dashboard.section.footer.opts.hl = "AlphaFooter"
 
 		dashboard.opts.layout = {
-			{ type = "padding", val = 6 },
+			{ type = "padding", val = 2 },
 			dashboard.section.header,
 			{ type = "padding", val = 2 },
 			dashboard.section.buttons,
