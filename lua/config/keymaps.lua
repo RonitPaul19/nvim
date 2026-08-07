@@ -58,3 +58,7 @@ set("n", "<C-l>", "<C-w>l")
 -- Creating indents
 set("v", "<", "<gv")
 set("v", ">", ">gv")
+
+-- moving blocks up-down
+set("v", "J", ":m '>+1<CR>gv=gv")
+set("v", "K", ":m '>-2<CR>gv=gv")
