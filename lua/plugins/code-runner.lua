@@ -18,7 +18,7 @@ return {
 				height = 0.8,
 
 				border_hl = "FloatBorder",
-				float_hl = "Normal",
+				float_hl = "FloatNormal",
 			},
 
 			filetype = {

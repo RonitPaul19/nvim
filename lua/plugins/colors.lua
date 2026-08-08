@@ -12,11 +12,11 @@ return {
 				no_bold = true,
 				no_underline = true,
 
-				-- transparent_background = true,
-				--
-				-- float = {
-				-- 	transparent = true,
-				-- },
+				transparent_background = true,
+
+				float = {
+					transparent = true,
+				},
 			})
 
 			vim.cmd.colorscheme("catppuccin")
