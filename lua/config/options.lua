@@ -39,8 +39,8 @@ opt.guicursor = ""
 
 opt.signcolumn = "yes"
 
-opt.updatetime = 100
-opt.timeoutlen = 200
+opt.updatetime = 300
+opt.timeoutlen = 400
 
 opt.completeopt = { "menuone", "noselect" }
 
