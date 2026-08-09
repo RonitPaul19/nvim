@@ -42,7 +42,7 @@ return {
 		dashboard.section.footer.opts.hl = "AlphaFooter"
 
 		dashboard.opts.layout = {
-			{ type = "padding", val = 2 },
+			{ type = "padding", val = 1 },
 			dashboard.section.header,
 			{ type = "padding", val = 2 },
 			dashboard.section.buttons,
