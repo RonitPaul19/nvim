@@ -94,13 +94,13 @@ return {
 				})
 			end
 
-			-- vim.lsp.config("vtsls", {
-			--   settings = {
-			--     typescript = {
-			--       tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript/node_modules/typescript/lib",
-			--     },
-			--   },
-			-- })
+			vim.lsp.config("vtsls", {
+				settings = {
+					typescript = {
+						tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript/node_modules/typescript/lib",
+					},
+				},
+			})
 
 			vim.lsp.config("emmet_language_server", {
 				capabilities = capabilities,
@@ -108,7 +108,7 @@ return {
 					"html",
 					"css",
 					"javascriptreact",
-					-- "typescriptreact",
+					"typescriptreact",
 					"vue",
 				},
 			})
