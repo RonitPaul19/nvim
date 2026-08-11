@@ -33,6 +33,10 @@ return {
 			desc = "Find in Global",
 		})
 
+		vim.keymap.set("n", "<leader>gf", builtin.git_files, {
+			desc = "Search Git Files",
+		})
+
 		vim.keymap.set("n", "<leader>pws", function()
 			local word = vim.fn.expand("<cword>")
 			builtin.grep_string({ search = word })
