@@ -58,3 +58,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.opt.fillchars = {
 	eob = " ",
 }
+
+vim.opt.smoothscroll = true
