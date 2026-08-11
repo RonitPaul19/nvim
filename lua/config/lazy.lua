@@ -20,6 +20,7 @@ require("lazy").setup({
 	},
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = false },
+	change_detection = { notify = false },
 })
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>")

@@ -1,5 +1,6 @@
 return {
 	"folke/trouble.nvim",
+
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -12,23 +13,29 @@ return {
 		},
 	},
 
+	config = function(_, opts)
+		require("trouble").setup(opts)
+
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>tn",
+			"<cmd>Trouble next skip_groups=true jump=true<CR>",
+			{ noremap = true, silent = true, desc = "Next Trouble item" }
+		)
+
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>tp",
+			"<cmd>Trouble prev skip_groups=true jump=true<CR>",
+			{ noremap = true, silent = true, desc = "Previous Trouble item" }
+		)
+	end,
+
 	keys = {
 		{
 			"<leader>tr",
 			"<cmd>Trouble diagnostics toggle<CR>",
 			desc = "Diagnostics",
-		},
-
-		{
-			"[t",
-			"<cmd>Trouble next<CR>",
-			desc = "Next Trouble item",
-		},
-
-		{
-			"]t",
-			"<cmd>Trouble prev<CR>",
-			desc = "Previous Trouble item",
 		},
 	},
 }
