@@ -5,7 +5,7 @@ return {
 			local opts = { buffer = bufnr, remap = false }
 			vim.keymap.set("n", "<leader>gs", "<cmd>Git<cr>")
 
-			vim.keymap.set("n", "<leader>p", function()
+			vim.keymap.set("n", "<leader>gp", function()
 				vim.cmd.Git("push")
 			end, opts)
 		end,
