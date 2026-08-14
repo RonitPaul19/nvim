@@ -38,7 +38,6 @@ return {
 				"prettier",
 				"stylua",
 				"ruff",
-				"clang-format",
 			},
 		},
 	},
