@@ -3,6 +3,12 @@ return {
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
 
+		keys = {
+			{ "[d", vim.diagnostic.goto_prev, desc = "Prev diagnostic", silent = true },
+			{ "]d", vim.diagnostic.goto_next, desc = "Next diagnostic", silent = true },
+			{ "<leader>d", vim.diagnostic.open_float, desc = "Show diagnostic float", silent = true },
+		},
+
 		config = function()
 			----------------------------------------------------------
 			-- Diagnostics
@@ -29,10 +35,6 @@ return {
 			----------------------------------------------------------
 			-- Keymaps (set globally so they don't get overwritten)
 			----------------------------------------------------------
-
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { silent = true })
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { silent = true })
-			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { silent = true })
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(event)

@@ -4,11 +4,53 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
+	cmd = "Telescope",
+	keys = {
+		{
+			"<leader>pf",
+			function()
+				require("telescope.builtin").find_files()
+			end,
+			desc = "Search Files",
+		},
+		{
+			"<leader>pg",
+			function()
+				require("telescope.builtin").live_grep()
+			end,
+			desc = "Find in Global",
+		},
+		{
+			"<leader>gf",
+			function()
+				require("telescope.builtin").git_files()
+			end,
+			desc = "Search Git Files",
+		},
+		{
+			"<leader>pws",
+			function()
+				require("telescope.builtin").grep_string({ search = vim.fn.expand("<cword>") })
+			end,
+			desc = "Search word under cursor",
+		},
+		{
+			"<leader>pWs",
+			function()
+				require("telescope.builtin").grep_string({ search = vim.fn.expand("<cWORD>") })
+			end,
+			desc = "Search WORD under cursor",
+		},
+		{
+			"<leader>pd",
+			function()
+				require("telescope.builtin").diagnostics()
+			end,
+			desc = "Search diagnostics",
+		},
+	},
 	config = function()
-		local telescope = require("telescope")
-		local builtin = require("telescope.builtin")
-
-		telescope.setup({
+		require("telescope").setup({
 			defaults = {
 				vimgrep_arguments = {
 					"rg",
@@ -23,32 +65,6 @@ return {
 					"!**/.git/*", -- Still ignore .git
 				},
 			},
-		})
-
-		vim.keymap.set("n", "<leader>pf", builtin.find_files, {
-			desc = "Search Files",
-		})
-
-		vim.keymap.set("n", "<leader>pg", builtin.live_grep, {
-			desc = "Find in Global",
-		})
-
-		vim.keymap.set("n", "<leader>gf", builtin.git_files, {
-			desc = "Search Git Files",
-		})
-
-		vim.keymap.set("n", "<leader>pws", function()
-			local word = vim.fn.expand("<cword>")
-			builtin.grep_string({ search = word })
-		end)
-
-		vim.keymap.set("n", "<leader>pWs", function()
-			local word = vim.fn.expand("<cWORD>")
-			builtin.grep_string({ search = word })
-		end)
-
-		vim.keymap.set("n", "<leader>pd", builtin.diagnostics, {
-			desc = "Search diagnostics",
 		})
 	end,
 }

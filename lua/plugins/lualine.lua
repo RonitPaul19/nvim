@@ -1,8 +1,8 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
-		"ThePrimeagen/harpoon",
 	},
 	config = function()
 		local colors = {

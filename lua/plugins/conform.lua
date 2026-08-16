@@ -37,14 +37,20 @@ return {
 			},
 		},
 
+		keys = {
+			{
+				"<leader>fc",
+				function()
+					require("conform").format({
+						async = true,
+					})
+				end,
+				desc = "Format Code",
+			},
+		},
+
 		config = function(_, opts)
 			require("conform").setup(opts)
-
-			vim.keymap.set("n", "<leader>fc", function()
-				require("conform").format({
-					async = true,
-				})
-			end, { desc = "Format Code" })
 		end,
 	},
 }

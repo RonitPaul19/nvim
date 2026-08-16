@@ -5,6 +5,12 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 
+	cmd = { "RunCode", "RunFile", "RunProject", "RunClose", "CloseCodeRunner" },
+
+	keys = {
+		{ "<leader>r", "<cmd>RunCode<CR>", desc = "Run current file" },
+	},
+
 	config = function()
 		require("code_runner").setup({
 			mode = "float",
@@ -29,7 +35,5 @@ return {
 				typescript = "tsx",
 			},
 		})
-
-		vim.keymap.set("n", "<leader>r", "<cmd>RunCode<CR>", { desc = "Run current file" })
 	end,
 }
