@@ -20,13 +20,4 @@ return {
 			},
 		},
 	},
-	{
-		"lewis6991/gitsigns.nvim",
-		name = "gitsigns",
-		event = { "BufReadPre", "BufNewFile" },
-		keys = {
-			{ "<leader>gh", "<cmd>Gitsigns preview_hunk<cr>", desc = "Preview hunk" },
-		},
-		opts = {},
-	},
 }
