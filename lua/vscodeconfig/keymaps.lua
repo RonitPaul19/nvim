@@ -3,7 +3,7 @@ vim.g.maplocalleader = " "
 
 -- paste and delete without overwriting
 vim.keymap.set("x", "p", [["_dP]], { desc = "Paste without yanking" })
-set({ "n", "v" }, "d", [["_d]], { desc = "Delete without yanking" })
+vim.keymap.set({ "n", "v" }, "d", [["_d]], { desc = "Delete without yanking" })
 
 -- save
 vim.keymap.set("n", "<leader>s", "<cmd>w<CR>", { noremap = true })
