@@ -15,7 +15,7 @@ return {
 				transparent_background = true,
 
 				float = {
-					transparent = true,
+					transparent = false,
 				},
 			})
 
