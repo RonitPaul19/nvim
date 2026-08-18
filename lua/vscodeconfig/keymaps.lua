@@ -1,39 +1,44 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local set = vim.keymap.set
-
 -- paste and delete without overwriting
-set("x", "p", [["_dP]], { desc = "Paste without yanking" })
+vim.keymap.set("x", "p", [["_dP]], { desc = "Paste without yanking" })
 set({ "n", "v" }, "d", [["_d]], { desc = "Delete without yanking" })
 
 -- save
-set("n", "<leader>s", "<cmd>w<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>s", "<cmd>w<CR>", { noremap = true })
 
 -- redo
-set("n", "U", "<C-r>")
+vim.keymap.set("n", "U", "<C-r>")
 
 -- clear search highlighting
-set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- skip folds (down, up)
-vim.cmd("nmap j gj")
-vim.cmd("nmap k gk")
+-- skip folds
+vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
 
 -- center pageup and pagedown
-set("n", "<C-d>", "<C-d>zz", { noremap = true })
-set("n", "<C-u>", "<C-u>zz", { noremap = true })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
 
 -- centered n and N
-set("n", "n", "nzzzv", { desc = "Next search result cursor centered" })
-set("n", "N", "Nzzzv", { desc = "Previous search result cursor centered" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result cursor centered" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result cursor centered" })
 
 -- visual block mode
-set("n", "<leader>v", "<C-v>", { desc = "Visual Block Mode" })
+vim.keymap.set("n", "<leader>v", "<C-v>", { desc = "Visual Block Mode" })
 
 -- indentation
-set("v", "<", "<gv")
-set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- moving blocks up-down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- keep the cursor at the same position while joining lines
+vim.keymap.set("n", "J", "mzJ`z")
 
 local opts = { noremap = true, silent = true }
 
