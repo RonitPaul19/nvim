@@ -25,7 +25,9 @@ vim.opt.inccommand = "split"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.opt.laststatus = 3
+vim.opt.laststatus = 0
+vim.opt.showcmd = false
+vim.opt.ruler = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
