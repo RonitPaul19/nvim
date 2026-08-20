@@ -4,7 +4,6 @@ vim.opt.termguicolors = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
--- vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 10
@@ -22,8 +21,6 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.inccommand = "split"
-
--- vim.opt.cmdheight = 0
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
