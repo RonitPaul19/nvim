@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Open netrw
+vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
+
 -- Save
 vim.keymap.set("n", "<leader>s", "<cmd>w<CR>")
 

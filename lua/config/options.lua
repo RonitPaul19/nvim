@@ -1,48 +1,48 @@
-local opt = vim.opt
+vim.g.netrw_banner = 0
 
-opt.termguicolors = true
+vim.opt.termguicolors = true
 
-opt.number = true
-opt.relativenumber = true
--- opt.cursorline = true
-opt.wrap = false
-opt.scrolloff = 8
-opt.sidescrolloff = 10
+vim.opt.number = true
+vim.opt.relativenumber = true
+-- vim.opt.cursorline = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 10
 
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.expandtab = true
-opt.smartindent = true
-opt.autoindent = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
 
-opt.ignorecase = true
-opt.smartcase = true
-opt.hlsearch = true
-opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
-opt.inccommand = "split"
+vim.opt.inccommand = "split"
 
--- opt.cmdheight = 0
+-- vim.opt.cmdheight = 0
 
-opt.splitbelow = true
-opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
-opt.laststatus = 3
+vim.opt.laststatus = 3
 
-opt.swapfile = false
-opt.backup = false
+vim.opt.swapfile = false
+vim.opt.backup = false
 
-opt.clipboard:append("unnamedplus")
-opt.isfname:append("@-@")
--- opt.guicursor = ""
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.isfname:append("@-@")
+vim.opt.guicursor = ""
 
-opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 
-opt.updatetime = 300
-opt.timeoutlen = 400
+vim.opt.updatetime = 300
+vim.opt.timeoutlen = 400
 
-opt.completeopt = { "menuone", "noselect" }
+vim.opt.completeopt = { "menuone", "noselect" }
 
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#5f2fa4" })
 
