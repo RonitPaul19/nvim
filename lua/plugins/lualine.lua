@@ -72,7 +72,7 @@ return {
 				lualine_c = {},
 				lualine_x = { "filename" },
 				lualine_y = {},
-				lualine_z = { "mode" },
+				lualine_z = {},
 			},
 		})
 	end,
