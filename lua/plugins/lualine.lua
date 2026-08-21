@@ -70,7 +70,7 @@ return {
 				lualine_a = {},
 				lualine_b = harpoon_slots,
 				lualine_c = {},
-				lualine_x = { "filename", "filetype" },
+				lualine_x = { "filename" },
 				lualine_y = {},
 				lualine_z = { "mode" },
 			},
