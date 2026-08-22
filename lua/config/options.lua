@@ -28,6 +28,7 @@ vim.opt.splitright = true
 vim.opt.laststatus = 3
 vim.opt.ruler = false
 vim.opt.showcmd = false
+vim.opt.cmdheight = 0
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -61,4 +62,4 @@ vim.opt.fillchars = {
 vim.opt.smoothscroll = true
 
 vim.opt.undofile = true
-vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"   
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
