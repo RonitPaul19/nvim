@@ -59,3 +59,6 @@ vim.opt.fillchars = {
 }
 
 vim.opt.smoothscroll = true
+
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"   
