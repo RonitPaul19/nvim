@@ -1,4 +1,10 @@
-vim.g.netrw_banner = 0
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_gzip = 1
+vim.g.loaded_tarPlugin = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.loaded_tutor_mode_plugin = 1
+vim.g.loaded_matchit = 1
 
 vim.opt.termguicolors = true
 
