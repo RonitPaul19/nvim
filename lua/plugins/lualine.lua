@@ -10,7 +10,7 @@ return {
 
 	config = function()
 		local colors = {
-			sky = "#89b4fa",
+			sky = "#9ccfd8",
 			base = "#191724",
 			white = "#ffffff",
 		}

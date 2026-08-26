@@ -41,7 +41,7 @@ vim.opt.backup = false
 
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.isfname:append("@-@")
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.signcolumn = "yes"
 
