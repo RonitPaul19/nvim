@@ -17,7 +17,7 @@ local function read_theme_name()
 	end
 	local content = f:read("*a")
 	f:close()
-	local name = content:match('vim%.g%.theme_name%s*=%s*["\']([^"\']+)["\']')
+	local name = content:match("vim%.g%.theme_name%s*=%s*[\"']([^\"']+)[\"']")
 	return name
 end
 
@@ -56,17 +56,33 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
+				transparent_background = true,
+				float = {
+					transparent = true,
+					solid = false,
+				},
 				no_italic = true,
 				no_bold = true,
 				no_underline = true,
 			})
 		end,
 	},
+
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
+		config = function()
+			require("tokyonight").setup({
+				transparent = true,
+				styles = {
+					sidebars = "transparent",
+					floats = "transparent",
+				},
+			})
+		end,
 	},
+
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -81,23 +97,36 @@ return {
 			})
 		end,
 	},
+
 	{
 		"neanias/everforest-nvim",
 		version = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("everforest").setup({})
+			require("everforest").setup({
+				transparent_background_level = 2,
+			})
 		end,
 	},
+
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
+		config = function()
+			require("kanagawa").setup({
+				transparent = true,
+			})
+		end,
 	},
+
+	-- Noir: no require("noir").setup()
 	{
 		"dzfrias/noir.nvim",
 		priority = 1000,
 	},
+
+	-- TheInk: no require("theink").setup()
 	{
 		"JWW127/theink",
 		priority = 1000,
