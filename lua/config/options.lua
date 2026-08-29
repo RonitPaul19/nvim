@@ -34,7 +34,7 @@ vim.opt.splitright = true
 vim.opt.laststatus = 3
 vim.opt.ruler = false
 vim.opt.showcmd = false
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 
 vim.opt.swapfile = false
 vim.opt.backup = false
