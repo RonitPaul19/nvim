@@ -8,6 +8,11 @@ vim.g.loaded_matchit = 1
 
 vim.opt.termguicolors = true
 
+vim.opt.shell = "pwsh.exe"
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
