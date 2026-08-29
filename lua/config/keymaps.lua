@@ -57,3 +57,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- keep the cursor at the same position while joining lines
 vim.keymap.set("n", "J", "mzJ`z")
+
+-- Escape to normal mode from terminal
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
