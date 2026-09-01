@@ -24,12 +24,18 @@ return {
 
 			completion = {
 				menu = {
-					border = "none",
+					border = "rounded",
 					auto_show = true,
+
+					winblend = 0,
 				},
 
 				documentation = {
 					auto_show = false,
+
+					window = {
+						border = "rounded",
+					},
 				},
 
 				ghost_text = {
@@ -46,6 +52,10 @@ return {
 
 			signature = {
 				enabled = true,
+
+				window = {
+					border = "rounded",
+				},
 			},
 
 			snippets = {
