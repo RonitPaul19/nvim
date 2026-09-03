@@ -48,6 +48,11 @@ return {
 			end,
 			desc = "Search diagnostics",
 		},
+		{
+			"<leader>pt",
+			"<cmd>TodoTelescope<CR>",
+			desc = "Search Todo",
+		},
 	},
 	config = function()
 		require("telescope").setup({
