@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter-textobjects",
   branch = "main",
+  event = "VeryLazy",
 
   config = function()
     require("nvim-treesitter-textobjects").setup({

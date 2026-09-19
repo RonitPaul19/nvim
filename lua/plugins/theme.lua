@@ -8,6 +8,16 @@ local THEME_MAP = {
 	kanagawa = "kanagawa",
 }
 
+local THEME_PLUGINS = {
+	catppuccin = "catppuccin",
+	["rose-pine"] = "rose-pine",
+	everforest = "everforest-nvim",
+	noir = "noir.nvim",
+	theink = "theink",
+	tokyonight = "tokyonight.nvim",
+	kanagawa = "kanagawa.nvim",
+}
+
 local STATE_FILE = vim.fn.stdpath("config") .. "/lua/_theme_state.lua"
 
 local function read_theme_name()
@@ -23,9 +33,13 @@ end
 
 local function apply_colorscheme(name)
 	local cs = THEME_MAP[name] or name
-	local ok, _ = pcall(vim.cmd.colorscheme, cs)
+	local plugin = THEME_PLUGINS[name]
+	if plugin then
+		pcall(require("lazy").load, { plugins = { plugin } })
+	end
+	local ok, err = pcall(vim.cmd.colorscheme, cs)
 	if not ok then
-		vim.notify("Failed to load colorscheme: " .. cs, vim.log.levels.ERROR)
+		vim.notify("Failed to load colorscheme: " .. cs .. " [" .. tostring(err) .. "]", vim.log.levels.ERROR)
 	end
 end
 
@@ -53,7 +67,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("catppuccin").setup({
 				transparent_background = true,
@@ -70,8 +84,7 @@ return {
 
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("tokyonight").setup({
 				transparent = true,
@@ -86,7 +99,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("rose-pine").setup({
 				styles = {
@@ -101,8 +114,7 @@ return {
 	{
 		"neanias/everforest-nvim",
 		version = false,
-		lazy = false,
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("everforest").setup({
 				transparent_background_level = 2,
@@ -112,7 +124,7 @@ return {
 
 	{
 		"rebelot/kanagawa.nvim",
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("kanagawa").setup({
 				transparent = true,
@@ -123,12 +135,12 @@ return {
 	-- Noir: no require("noir").setup()
 	{
 		"dzfrias/noir.nvim",
-		priority = 1000,
+		lazy = true,
 	},
 
 	-- TheInk: no require("theink").setup()
 	{
 		"JWW127/theink",
-		priority = 1000,
+		lazy = true,
 	},
 }
