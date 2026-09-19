@@ -32,21 +32,21 @@ end
 
 local current_theme = read_theme_name() or "rose-pine"
 
+local function poll_theme_state()
+	local new_theme = read_theme_name()
+	if new_theme and new_theme ~= current_theme then
+		current_theme = new_theme
+		apply_colorscheme(new_theme)
+	end
+	vim.defer_fn(poll_theme_state, 1000)
+end
+
 vim.api.nvim_create_autocmd("User", {
 	pattern = "VeryLazy",
 	once = true,
 	callback = function()
 		apply_colorscheme(current_theme)
-	end,
-})
-
-vim.api.nvim_create_autocmd("FocusGained", {
-	callback = function()
-		local new_theme = read_theme_name()
-		if new_theme and new_theme ~= current_theme then
-			current_theme = new_theme
-			apply_colorscheme(new_theme)
-		end
+		poll_theme_state()
 	end,
 })
 

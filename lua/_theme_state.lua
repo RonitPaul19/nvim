@@ -1,1 +1,1 @@
-vim.g.theme_name = "catppuccin-mocha"
+vim.g.theme_name = "rose-pine"
