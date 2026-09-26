@@ -1,1 +1,1 @@
-vim.g.theme_name = "rose-pine"
+vim.g.theme_name = "tokyonight"
